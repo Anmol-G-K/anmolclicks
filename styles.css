@@ -43,8 +43,13 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    display: flex;
+    flex-direction: row; /* Arrange in a row */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: transform 0.3s ease; /* Smooth transition effect */
 }
+
 
 .close {
     position: absolute;
@@ -56,8 +61,9 @@
     cursor: pointer;
 }
 
+
 .details {
-    margin-top: 20px;
+    flex: 1; /* Occupy remaining space */
     text-align: left;
 }
 
@@ -72,4 +78,11 @@
 
 .details ul li {
     margin-bottom: 5px;
+}
+
+#modal-image {
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px; /* Space between image and details */
+    align-self: flex-start; /* Align image to the top */
 }

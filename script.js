@@ -19,20 +19,18 @@ function openModal(title, camera, shutterSpeed, aperture, iso, description) {
     var modalShutterSpeed = document.getElementById('modal-shutter-speed');
     var modalAperture = document.getElementById('modal-aperture');
     var modalIso = document.getElementById('modal-iso');
+    var modalDescription = document.getElementById('modal-description');
 
-    if (modal && modalTitle && modalCamera && modalShutterSpeed && modalAperture && modalIso) {
-        modalImage.src = event.target.src;
-        modalTitle.textContent = title;
-        modalCamera.textContent = "Camera: " + camera;
-        modalShutterSpeed.textContent = "Shutter Speed: " + shutterSpeed;
-        modalAperture.textContent = "Aperture: " + aperture;
-        modalIso.textContent = "ISO: " + iso;
+    modalImage.src = event.target.src;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalCamera.textContent = camera;
+    modalShutterSpeed.textContent = shutterSpeed;
+    modalAperture.textContent = aperture;
+    modalIso.textContent = iso;
 
-        modal.style.display = 'block';
-        document.body.classList.add('modal-open'); // Add class to body for background blur effect
-    } else {
-        console.error('One or more modal elements not found.');
-    }
+    modal.style.display = 'flex'; // Display modal as flexbox
+    document.body.classList.add('modal-open'); // Add class for background blur effect
 }
 
 function closeModal() {
