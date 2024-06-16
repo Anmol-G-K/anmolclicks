@@ -17,16 +17,32 @@
     </header>
     <section class="gallery">
         <div class="grid-item" data-aos="fade-up">
-            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo1.jpg" alt="Photo 1">
+            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo1.jpg" alt="Photo 1" onclick="openModal('Photo 1', 'Canon EOS 5D Mark IV', '1/1000 sec', 'f/2.8', 'ISO 200')">
         </div>
         <div class="grid-item" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo2.jpg" alt="Photo 2">
+            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo2.jpg" alt="Photo 2" onclick="openModal('Photo 2', 'Nikon D850', '1/500 sec', 'f/4.0', 'ISO 400')">
         </div>
         <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
-            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo3.jpg" alt="Photo 3">
+            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo3.jpg" alt="Photo 3" onclick="openModal('Photo 3', 'Sony A7 III', '1/200 sec', 'f/2.0', 'ISO 800')">
         </div>
         <!-- Add more grid items as needed -->
     </section>
+
+    <!-- Modal for displaying enlarged image and details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div class="details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <ul id="modal-info">
+                    <!-- Details like camera make, shutter speed, aperture, ISO, etc. will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Link to AOS (Animate On Scroll) JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Link to your custom script.js -->
