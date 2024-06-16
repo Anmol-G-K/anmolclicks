@@ -15,25 +15,23 @@ header {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Space between grid items */
     padding: 20px;
 }
 
-.image-container {
-    margin: 10px;
-    overflow: hidden;
-    width: 300px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+.grid-item {
+    overflow: hidden; /* Ensure images don't overflow */
+    position: relative; /* Positioning context for images */
 }
 
-.image-container img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
+.grid-item img {
+    width: 100%; /* Images fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-.image-container img:hover {
-    transform: scale(1.1);
+.grid-item:hover img {
+    transform: scale(1.1); /* Scale up on hover */
 }
