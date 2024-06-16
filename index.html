@@ -17,13 +17,13 @@
     </header>
     <section class="gallery">
         <div class="grid-item" data-aos="fade-up">
-            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo1.jpg" alt="Photo 1" onclick="openModal('Photo 1', 'Canon EOS 5D Mark IV', '1/1000 sec', 'f/2.8', 'ISO 200')">
+            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo1.jpg" alt="Photo 1" onclick="openModal('Ephemeral Splendor', 'Canon EOS 1500D', '8 sec', 'f/9', 'ISO 100', 'Amidst the velvet cloak of darkness, a fleeting burst of brilliance ignites the night sky, a symphony of colors that dance in ethereal splendor.')">
         </div>
         <div class="grid-item" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo2.jpg" alt="Photo 2" onclick="openModal('Photo 2', 'Nikon D850', '1/500 sec', 'f/4.0', 'ISO 400')">
+            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo2.jpg" alt="Photo 2" onclick="openModal('Photo 2', 'Canon EOS 1500D', '1/200 sec', 'f/10', 'ISO 100')">
         </div>
         <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
-            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo3.jpg" alt="Photo 3" onclick="openModal('Photo 3', 'Sony A7 III', '1/200 sec', 'f/2.0', 'ISO 800')">
+            <img src="https://anmol-g-k.github.io/anmolclicks/photos/photo3.jpg" alt="Photo 3" onclick="openModal('Photo 3', 'Canon EOS 1500D', '1/20 sec', 'f/3.5', 'ISO 1600')">
         </div>
         <!-- Add more grid items as needed -->
     </section>
@@ -35,9 +35,11 @@
             <img id="modal-image" src="" alt="">
             <div class="details">
                 <h2 id="modal-title"></h2>
-                <p id="modal-description"></p>
                 <ul id="modal-info">
-                    <!-- Details like camera make, shutter speed, aperture, ISO, etc. will be dynamically added here -->
+                    <li><strong>Camera:</strong> <span id="modal-camera"></span></li>
+                    <li><strong>Shutter Speed:</strong> <span id="modal-shutter-speed"></span></li>
+                    <li><strong>Aperture:</strong> <span id="modal-aperture"></span></li>
+                    <li><strong>ISO:</strong> <span id="modal-iso"></span></li>
                 </ul>
             </div>
         </div>

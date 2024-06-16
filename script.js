@@ -11,30 +11,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Function to open modal
-function openModal(title, camera, shutterSpeed, aperture, iso) {
+function openModal(title, camera, shutterSpeed, aperture, iso, description) {
     var modal = document.getElementById('modal');
     var modalImage = document.getElementById('modal-image');
     var modalTitle = document.getElementById('modal-title');
     var modalDescription = document.getElementById('modal-description');
-    var modalInfo = document.getElementById('modal-info');
+    var modalCamera = document.getElementById('modal-camera');
+    var modalShutterSpeed = document.getElementById('modal-shutter-speed');
+    var modalAperture = document.getElementById('modal-aperture');
+    var modalIso = document.getElementById('modal-iso');
 
     modalImage.src = event.target.src;
     modalTitle.textContent = title;
-    modalDescription.textContent = "A brief description or caption can go here."; // Replace with actual description if available
-
-    // Clear existing info and add new details
-    modalInfo.innerHTML = "";
-    var details = `
-        <li><strong>Camera:</strong> ${camera}</li>
-        <li><strong>Shutter Speed:</strong> ${shutterSpeed}</li>
-        <li><strong>Aperture:</strong> ${aperture}</li>
-        <li><strong>ISO:</strong> ${iso}</li>
-    `;
-    modalInfo.innerHTML = details;
+    modalDescription.textContent = description;
+    modalCamera.textContent = camera;
+    modalShutterSpeed.textContent = shutterSpeed;
+    modalAperture.textContent = aperture;
+    modalIso.textContent = iso;
 
     modal.style.display = 'block';
     document.body.classList.add('modal-open'); // Add class to body for background blur effect
 }
+
 
 // Function to close modal
 function closeModal() {
